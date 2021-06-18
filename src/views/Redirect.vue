@@ -16,7 +16,7 @@
 
 <script>
 import axios from "axios";
-import Loading from "../components/Loding.vue";
+import Loading from "../components/Loading.vue";
 
 export default {
   name: "App",
@@ -36,7 +36,6 @@ export default {
       let code = this.global.getQueryString("code");
       if (!code) {
         let url = this.global.authURL + window.location.href;
-        console.log(url);
         window.location.href = url;
       } else {
         axios
